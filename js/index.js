@@ -1,10 +1,11 @@
 var $ = function(id){
     return document.getElementById(id);
 }
-var movieSelection = function(){
+var seatSelection = function(){
     var movie = $("movies");
-    movie.value
+    var counter = 0;
+    
 }
-window.onload(){
-    $("pay").sub
+window.onload = function(){
+    $("confirmselection").onclick = seatSelection;
 }
