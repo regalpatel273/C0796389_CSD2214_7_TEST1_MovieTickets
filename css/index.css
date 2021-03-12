@@ -16,3 +16,43 @@ article {
   background-color: lightblue;
   padding: 0.2em;
 }
+.seats {
+  border: 1px solid red;
+  background: yellow;
+}
+.smallBox::before {
+  content: ".";
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin-right: 10px;
+}
+.greenBox::before {
+  content: "";
+  background: Green;
+}
+.redBox::before {
+  content: "";
+  background: Red;
+}
+.emptyBox::before {
+  content: "";
+  background-color: grey;
+}
+table {
+  text-align: center;
+}
+input[type="checkbox"]:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  background-color: grey;
+}
+
+input[type="checkbox"]:checked:before {
+  background-color: Green;
+  font-size: 15px;
+}
