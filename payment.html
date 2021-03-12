@@ -42,15 +42,78 @@
                 var name = $("fname");
                 var emailId = $("mail");
                 var phnNum = $("pnum");
-                if(name.nodeValue == ""){
-
+                var ccnum = $("ccnum");
+                var month = $("month");
+                var year = $("year");
+                var nameoncard = $("noc");
+                var cvv = $("cvv");
+                var isValid = true;
+                if(name.value == ""){
+                    $("fname").nextElementSibling.firstChild.value = "Required Field."
+                    isValid = false;
                 }
+                else{
+                    $("fname").nextElementSibling.firstChild.nodeValue == "";
+                }
+                if(emailId.value == ""){
+                    $("mail").nextElementSibling.firstChild.nodeValue == "Required Field.";
+                    isValid = false;
+                }
+                else{
+                    $("mail").nextElementSibling.firstChild.nodeValue == "";
+                }
+                if(phnNum.value == ""){
+                    $("pnum").nextElementSibling.firstChild.nodeValue == "Required Field.";
+                    isValid = false;
+                }
+                else{
+                    $("pnum").nextElementSibling.firstChild.nodeValue == "";
+                }
+                if(ccnum.value == ""){
+                    $("pnum").nextElementSibling.firstChild.nodeValue == "Required Field.";
+                    isValid = false;
+                }
+                else{
+                    $("pnum").nextElementSibling.firstChild.nodeValue == "";
+                }
+                if(month.value == "month"){
+                    alert("Select month");
+                    isValid = false;
+                }
+                else{
+                    $("pnum").nextElementSibling.firstChild.nodeValue == "";
+                }
+                if(year.value == "year"){
+                    alert("select year")
+                    isValid = false;
+                }
+                else{
+                    $("pnum").nextElementSibling.firstChild.nodeValue == "";
+                }
+                if(cvv.value == ""){
+                    $("pnum").nextElementSibling.firstChild.nodeValue == "Required Field.";
+                    isValid = false;
+                }
+                else{
+                    $("pnum").nextElementSibling.firstChild.nodeValue == "";
+                }
+
+                if(isValid){
+                    $("payment_form").submit();
+                }
+            }
+            window.onload = function(){
+                $("submit").onclick = validate;
+                $("fname").focus();
             }
         </script>
     </head>
     <body>
         <h1>Complete the payment</h1>
-        <form>
+        <p>Selected Movie:</p><span></span>
+        <p>Total number of seats:</p><span></span>
+        <p>Total amount:</p><span></span>
+        <form id="payment_form" method="GET">
             <label>Name:</label><input type="text" id="fname"><span>*</span></br>
             <label>E-mail:</label><input type="email" id="mail"><span>*</span><br>
             <label>Phone Number:</label><input type="tel" id="pnum"><span>*</span><br>
